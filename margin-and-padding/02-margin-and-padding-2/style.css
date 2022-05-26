@@ -1,20 +1,22 @@
 body {
   background: #eee;
   font-family: sans-serif;
-  /* box-sizing: border-box; */
+  margin: 0px;
 }
 
 .card {
   width: 400px;
   background: #fff;
-  /* margin: 16px auto; */
+  margin: 16px auto;
   display: block;
-  /* padding: 8px; */
-  border: 1px solid white; /*reveals
+  padding: 8px;
+  /*border: 1px solid white; /*reveals
   title's top-margin and button container's
   bottom margin, by stopping 
   margin collapse (see https://www.sitepoint.com/
-                   collapsing-margins/)*/
+                   collapsing-margins/)
+  https://www.youtube.com/
+      watch?v=uEfH6qnFF6Y&ab_channel=KevinPowell*/
 }
 
 .title {
@@ -22,11 +24,13 @@ body {
   font-size: 16px;
   margin: 0; /*removes white line under title,
   caused by default html margin from h1*/
+  margin-bottom: 8px;
 }
 
 .content {
   background: #e3f4ff;
   padding: 16px 6px 16px 6px;
+  margin-bottom: 8px;
 }
 
 .button-container {
@@ -35,12 +39,13 @@ body {
   text-align: center;
 }
 
+
 .title,
 .content,
 .button-container {
   padding: 8px;
-  margin: 8px;
 }
+
 
 button {
   display: block;
@@ -73,4 +78,3 @@ not just a top+bottom duo.
 nested margins transfer the largest margin to the
 top-most element
 */
-
