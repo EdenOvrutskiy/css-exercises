@@ -1,27 +1,76 @@
 body {
   background: #eee;
   font-family: sans-serif;
+  /* box-sizing: border-box; */
 }
 
 .card {
   width: 400px;
   background: #fff;
-  margin: 16px auto;
+  /* margin: 16px auto; */
+  display: block;
+  /* padding: 8px; */
+  border: 1px solid white; /*reveals
+  title's top-margin and button container's
+  bottom margin, by stopping 
+  margin collapse (see https://www.sitepoint.com/
+                   collapsing-margins/)*/
 }
 
 .title {
   background: #e3f4ff;
+  font-size: 16px;
+  margin: 0; /*removes white line under title,
+  caused by default html margin from h1*/
 }
 
 .content {
   background: #e3f4ff;
+  padding: 16px 6px 16px 6px;
 }
 
 .button-container {
+  display: block;
   background: #e3f4ff;
+  text-align: center;
+}
+
+.title,
+.content,
+.button-container {
+  padding: 8px;
+  margin: 8px;
 }
 
 button {
+  display: block;
   background: white;
   border: 1px solid #eee;
+  padding: 8px 24px 8px 24px;
+  margin: auto;
 }
+
+
+/* challenge: I can't see the white margin
+on top + bottom of the card. insepcting seems to
+suggest there is some built-in margin to the
+body, yet I can't get rid of it from chrome dev tools
+or editing this file. 
+when inspecting, the title is bigger than the 
+"block" allocated by the `display` property
+"border-box" doesn't seem to help.
+
+https://stackoverflow.com/questions/9519841/why-does-this-css-margin-top-style-not-work
+- claims two top margins can collapse?
+
+https://www.sitepoint.com/collapsing-margins/
+adjoining margins.. - the root element?of
+ two or more boxes (which may be next> to on<e another or nested)
+
+margin collapse applies to 2 touching top margins,
+not just a top+bottom duo.
+
+nested margins transfer the largest margin to the
+top-most element
+*/
+
