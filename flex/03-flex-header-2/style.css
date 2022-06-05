@@ -46,3 +46,34 @@ a {
 ul {
   list-style-type: none;
 }
+
+/* solution */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+/* causing list items to display horizontally:
+either
+* target ul element
+ul {
+  display: flex;
+or
+* target .links 
+or
+* create a div container for it, like the 
+instructions hint at?
+(at index.html)
+}
+*/
+.links {
+  display: flex;
+  gap: 8px;
+}
+
+.left-items, .right-items {
+  display: flex;
+  gap: 16px;
+}
