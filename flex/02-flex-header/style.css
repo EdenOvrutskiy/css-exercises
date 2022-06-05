@@ -1,9 +1,6 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
-  display: flex;
-  align-items: space-between;
-  justify-content: space-between;
 }
 
 .logo {
@@ -35,18 +32,45 @@ ul {
 a {
   font-size: 22px;
   background: white;
-  margin: 8px;
+  margin: 8px; 
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
 }
 
+/* solution */
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+a {
+  margin: 8px; /* not sure if targetting ul
+  is better, or how important "gap" is.*/
+}
+/*
 .left-links,
 .right-links {
   margin-left: 8px;
   display: flex; /* elongates <li> items */
   /*justify-content: center; /*does nothing?! */
-  align-items: center; /* actually works, 
+  /*align-items: center; /* actually works, 
   perhaps the axis of these items is inverted 
-  by default */
+  by default 
 }
+*/
+
+
+/* 
+improving my code:
+
+* using justify-content: space-between
+  * how it works:
+    * justify content is main axis, not cross.
+    * only targets direct decendants, 
+  * benefits:
+    * expresses design-intention succinctly 
+    * less cryptic than targetting left/right links
+    * 
+*/
