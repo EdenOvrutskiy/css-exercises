@@ -25,3 +25,85 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+/* solution */
+
+body {
+  display: flex;
+  flex-direction: column; /* axis are flipped:
+  justify-content -> main axis, vertical ^v
+  align-items -> cross axis, horizontal <> */ 
+  justify-content: space-between; /* send
+  footer to the bottom, keep content in middle,
+  header at top*/
+}
+
+li {
+  list-style-type: none;
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header,
+.footer {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 12px;
+}
+.left-links, .right-links{
+  display: flex; /*causes menu to be horizontal */
+  gap: 16px;
+  /* margin: 0px 8px; */
+}
+
+ul {
+  padding: 0px; /* pins About to left */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+button {
+  padding: 8px;
+}
+
+/* stuck:
+to put the img at the center of the page, I have to
+set align-items at the body (parent element of parent
+element) -> targetting parent class is not enough
+
+but the header inherits the same setting, and I 
+can't put it to "space-between"..
+
+in fact, I can't put profile and setting portion
+of the header to the right at all, even with it.
+
+justify-content: space-between; does the trick
+
+but it's then overwritten by the body centering, 
+even if it's listed later in the .css file...
+
+it's werid how the body's center is on a different
+axis, and yet fucks up my header
+
+changing content to flex = good
+now make it a column
+
+last challenge: stick footer at the bottom and keep
+it there, no gap..
+
+can't seem to insert a "space-between" in the big 3
+(header, content, footer) vertically.
+
+fixed, was justify-content instead of align-items.*/
