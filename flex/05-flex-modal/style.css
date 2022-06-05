@@ -64,3 +64,32 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+/* my solution */
+.modal {
+  display: flex;
+  padding: 12px;
+  gap: 12px;
+}
+/* created a div for the mid section 
+   moved the x button's class outside of it */
+.icon {
+  /* correct the dimension to what the original
+  width and height specified: */
+  min-width: 42px;
+  min-height: 42px;
+}
+.header {
+  font-weight: bolder;
+  font-size: large;
+  margin-bottom: 12px;
+}
+
+.close-button{
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.text {
+  margin-bottom: 12px;
+}
