@@ -23,6 +23,81 @@ body {
 
 .card {
   border: 1px solid #eee;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, .06);
   border-radius: 4px;
+}
+
+
+/*solution*/
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between; /* main axis ^v */
+  /* align-items: stretch; cross-axis <> */
+  justify-content: space-between; /* normal == stretch */
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+
+/* added .cards class  */
+.cards {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+.card {
+/*  min-height: 150px;
+  min-width: 250px;*/
+  max-height: 500px;
+  max-width: 250px;
+  padding: 24px;
+  border: grey;
+}
+
+/* added .site-content class, containing cards
+   and links  */
+.site-content {
+  /* flex-grow: 1; */
+  display: flex; 
+  flex-grow: 1;
+  /* align-self: stretch; */
+  
+}   
+
+.footer {
+  /* margin-top: auto; */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-size: 24px;
+  color: white;
+  padding:16px;
 }
