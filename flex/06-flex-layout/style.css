@@ -36,6 +36,7 @@ body {
   justify-content: space-between; /* send
   footer to the bottom, keep content in middle,
   header at top*/
+  flex: 1; /* not sure how important this is */
 }
 
 li {
@@ -106,4 +107,10 @@ it there, no gap..
 can't seem to insert a "space-between" in the big 3
 (header, content, footer) vertically.
 
-fixed, was justify-content instead of align-items.*/
+fixed, was justify-content instead of align-items.
+
+
+difference between my solution and proposed solution:
+
+I didn't use the "flex" property.
+(basis, grow, shrink)*/
